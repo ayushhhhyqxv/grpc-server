@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"net"
-	pb "github.com/ayushhhhyqxv/grpc-server"
+	pb "github.com/ayushhhhyqxv/grpc-server/proto"
 	"google.golang.org/grpc"
 )
 
@@ -12,7 +12,7 @@ const (
 )
 
 type command struct {
-	pb.UnimplementedGreetServiceServer
+	pb.GreetServiceServer
 }
 
 func main() {
@@ -22,7 +22,7 @@ func main() {
 	}
 
 	grpcServer := grpc.NewServer()
-	pb.registerGreetServiceServer(grpcServer,&command{})
+	pb.RegisterGreetServiceServer(grpcServer,&command{})
 	if err := grpcServer.Serve(lis);err!=nil{
 		log.Fatalf("Failed to Start : %v",err)
 	}
