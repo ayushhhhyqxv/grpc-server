@@ -27,6 +27,11 @@ func main() {
 		"Ayush",
 		"Yash",
 		"Kartik",
+		"Arya",
+		"Aryan",
+		"Arjun",
+		"Shlok","Sarthak",
+
 	},
 	}
 
