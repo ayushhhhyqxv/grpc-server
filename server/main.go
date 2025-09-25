@@ -12,7 +12,7 @@ const (
 )
 
 type command struct {
-	pb.GreetServiceServer
+	pb.UnimplementedGreetServiceServer
 }
 
 func main() {
